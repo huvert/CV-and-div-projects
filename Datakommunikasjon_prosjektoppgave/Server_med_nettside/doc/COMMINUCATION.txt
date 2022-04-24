@@ -1,0 +1,26 @@
+
+
+CMD                         FROM          TO            Description
+==========================================================================================
+-- Bootup --
+"join-room"                 clients       server        Request to join a room (rooms are used to filter trafic)
+                                                        room#clientID (optinal: Give the client an ID-name)
+"req-client-list"           website       server        Request list of all clients
+"res-client-list"           server        website (*)   ^Response to request
+
+
+-- new data packet (LIVE) --
+"res-data"                  esp-client    server        Response from esp (data)
+"data->website"             server        website       Sends data from server to Website
+
+
+-- Data (FIREBASE) --
+'req-data-full'             website       server        Require all data from selected client
+'res-data-log'              server        website       Responds with data as JSON.
+'res-data-barchart'         ^             ^             ^
+'res-data-linechart'        ^             ^             ^
+
+*sends only to the client that requested the data.
+
+Data format: måling#day#month#year#05:20:40
+         ex: 71.0#16#11#2020#17:04:18

@@ -1,0 +1,309 @@
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+h1 {
+  font-size: 3.5rem;
+  line-height: 1.5;
+  font-weight: bold;
+}
+h2 {
+  font-family: "Montserrat-bold", "Montserrat", sans-serif;
+  font-weight: bold;
+  padding: 5% 0 0;
+}
+h4 {
+  font-weight: bold;
+}
+
+td, th {
+  border: 1px solid #cccccc;
+  padding: 8px;
+}
+
+th {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+tr: hover {
+  background-color: black;
+  color: white;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* ---- Navbar ----*/
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.navbar-text {
+  font-size: 1.2rem;
+  margin: 0 1rem;
+}
+
+
+/* ---- Main Window ---- */
+.main-window {
+  position: relative;
+  background-color: #eeeeee;
+  height: 815px;
+  width: 100%;
+  margin: 0;
+  overflow: auto;
+  background-image: url("../images/background-img.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.layer-2 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+
+/* -- Window: Admin -- */
+#window-admin {
+  background-color: #32e0c4;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  z-index: 2;
+  display: none;
+}
+
+#admin-container {
+  padding: 180px;
+  text-align: center;
+}
+
+#rick-rolled {}     /* Used by jquery */
+
+.admin-btn {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 160px;
+  border: 0;
+  background-image: url("../images/panic_button.png");
+  background-size: 120%;
+  background-position: center center;
+}
+
+.overlay {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 160px;
+  border: 0;
+  opacity: 0;
+  transition: .500ms ease;
+  background-color: #A50909;
+}
+
+.admin-btn:hover .overlay{
+  opacity: 0.1;
+}
+
+.iframe-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* -- Window: Log -- */
+#window-log {
+  background-color: #32e0c4;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  z-index: 2;
+  display: none;
+}
+
+.data-log {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+#data-log-table {}   /* Used by jquery */
+
+
+/* -- Window: Data Visualization -- */
+#window-data {
+  background-color: #32e0c4;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  z-index: 2;
+  display: none;
+}
+
+.data-div {
+  position: relative;
+  padding: 0 3%;
+  width: 100%;
+  height: 100%;
+  background-color: #eeeeee;
+}
+
+#window-data .row {
+  height: 50%;
+}
+
+/* ---   Client selector window   --- */
+.main-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  margin: 0;
+}
+.client-panel {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.client-main-box {
+  overflow: hidden;
+  overflow-y: scroll;
+  height: 50%;
+  margin: 8% 8% 0% 8%;
+}
+
+.responsive-main-box {
+  background-color: #14b2b8;
+  border-radius: 10px;
+  border: 2px solid black;
+  width: 30%;
+}
+@media screen and (max-width: 1300px){
+  .responsive-main-box {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 1024px){
+  .responsive-main-box {
+    width: 80%;
+  }
+}
+.client-main-box::-webkit-scrollbar {
+  width: 12px;
+}
+.client-main-box::-webkit-scrollbar-thumb {
+  background: #0d7377;
+  border-radius: 6px;
+}
+.client-main-box::-webkit-scrollbar-thumb:hover {
+  background: #212121;
+}
+
+.selected {     /* This class is added to selected element by jQuery */
+  background-color: #353535;
+  color: white;
+}
+
+#client-log-table {}       /* Used by jquery */
+
+#client-log-table tr:nth-child(even) {
+  background-color: #129ca1;
+}
+#client-log-table tr:hover td {
+  background-color: #212121;
+  color: white;
+}
+#client-log-table tr {
+  height: 70px;
+}
+
+#servo-btn-panel {
+  display: none;
+}
+.servo-buttons-container {
+  display: flex;
+  height: 10%;
+  margin: 2% 8% 0% 8%;
+}
+.servo-buttons-child-1 {
+  width: 30%;
+  height: 100%;
+}
+.servo-buttons-child-1 h4 {
+  margin: 5% 0 0 5%;
+}
+.servo-buttons-child-2 {
+  width: 70%;
+  height: 100%;
+  padding-left: 10%;
+}
+
+.servo-btn {
+  margin: 5% 2%;
+  height: 60%;
+  width: 40%;
+  border: 1px solid black;
+}
+
+
+
+/* --- Background image --- */
+.bg-img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+
+
+/* --- Footer --- */
+.footer {
+  position: fixed;
+  botton: 0;
+  background-color: #212121;
+  height: 80px;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  padding-top: 20px;
+  z-index: 3;
+}
+
+.footer-text {
+  color: #FFFFFF;
+}
+
+/*
+Color scheme:
+#eeeeee
+#32e0c4
+#0d7377
+#212121
+*/

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Bootstrap and Jquery   -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="images/ico" href="images/favicon.ico">
+  <title>Gruppe 6</title>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+    <!-- Navbar logo -->
+    <a class="navbar-brand" href="#"><img class="logo-image" id="nav-logo" src="images/logo.png" alt=""></a>
+    <!-- Hamburger -->
+    <button class="navbar-toggler ml-auto" data-toggle="collapse" data-target="#collapse_target">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- navbar buttons -->
+    <div class="collapse navbar-collapse" id="collapse_target">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link navbar-text" id="nav-admin" href="#">Admin</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link navbar-text" id="nav-log" href="#">Logg</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link navbar-text" id="nav-data" href="#">Data Visualisering</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="main-window">
+    <!-- Navbar buttons shows and hides elements in this layer -->
+    <div class="layer-2">
+
+      <div id="window-admin">
+        <div id="admin-container">
+          <button class="admin-btn">
+            <div class="overlay"></div>
+          </button>
+        </div>
+        <div id="rick-rolled">
+        </div>
+      </div>
+
+      <div id="window-log">
+        <!-- Scrollable datalog -->
+        <div class="data-log">
+          <table>
+            <thread>
+              <tr>
+                <th>Dato</th>
+                <th>Klokkeslett</th>
+                <th>Data</th>
+              </tr>
+            </thread>
+            <tbody id="data-log-table"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="window-data">
+        <!-- 2 x 2 grid when dekstop. 4 x 1 tablet / phone -->
+        <div class="row">
+          <div class="data-div">
+            <canvas id="line-chart"></canvas>
+          </div>
+        </div>
+        <div class="row">
+          <div class="data-div">
+            <canvas id="bar-chart"></canvas>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Client-List on main window -->
+    <div class="main-container">
+      <div class="client-panel">
+        <div class="responsive-main-box client-main-box">
+          <table>
+            <thread>
+              <tr>
+                <th><h4>Klienter</h4></th>
+              </tr>
+            </thread>
+            <tbody id="client-log-table"></tbody>
+          </table>
+      </div>
+
+        <div id="servo-btn-panel">
+          <div class="responsive-main-box servo-buttons-container">
+            <div class="servo-buttons-child-1"><h4>Servo</h4></div>
+            <div class="servo-buttons-child-2">
+              <button type="button" class="btn btn-success servo-btn" id="start-button">START</button>
+              <button type="button" class="btn btn-danger servo-btn" id="stop-button">STOP</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <p class="footer-text">© Copyright 2020 Gruppe 06</p>
+  </div>
+
+
+  <!-- node-modules -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <script src="socket.io/socket.io.js"></script>
+
+  <!-- My Scripts -->
+  <script src="config.js" charset="utf-8"></script>
+  <script src="scripts/plots.js" charset="utf-8"></script>
+  <script src="scripts/index.js" charset="utf-8"></script>
+  <script src="scripts/animations.js" charset="utf-8"></script>
+</body>
+
+</html>

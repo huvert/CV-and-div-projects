@@ -4,4 +4,4 @@
 This repository contains my personal CV and some projects etc. i've 
 done over the years. 
 
-I hope this gives picture / track record than a CV alone. 
+I hope this gives a better picture / track record than a CV alone. 
